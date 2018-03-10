@@ -85,7 +85,7 @@ img.ui.image {
   margin-top: -1.2rem;
 }
 .ui.horizontal.statistics {
-  background-image: url('../images/Wallpaper.jpg')
+  background-image: url('./../images/Wallpaper.jpg')
 }
 nav.ui.menu {
   border-radius: 0; }
