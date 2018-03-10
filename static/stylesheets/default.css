@@ -82,7 +82,6 @@ img {
 
 img.ui.image {
   display: block;
-  margin-top: -1.2rem;
 }
 .ui.horizontal.statistics {
   background-image: url('./../images/Wallpaper.jpg')
@@ -100,7 +99,7 @@ nav.ui.menu {
 .ui.vertical.stripe.segment {
   padding: 4rem 0; }
 .ui.vertical.segment {
-  padding: 2rem 0; }
+  padding: rem 0; }
 
 .ui.segment {
   margin-right: 20rem;
