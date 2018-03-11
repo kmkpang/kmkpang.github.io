@@ -83,9 +83,6 @@ img {
 img.ui.image {
   display: block;
 }
-.ui.horizontal.statistics {
-  background-image: url('./../images/Wallpaper.jpg')
-}
 nav.ui.menu {
   border-radius: 0; }
   nav.ui.menu.ui.container > a.item:first-child {
@@ -101,10 +98,25 @@ nav.ui.menu {
 .ui.vertical.segment {
   padding: rem 0; }
 
-.ui.segment {
-  margin-right: 20rem;
-  margin-left: 1rem;
+.ui.main.basic.segment {
+  margin-right: 10rem;
+  margin-left: -10rem;
 }
+
+p.about-me {
+  font-size: 1.3rem;
+  line-height: 3rem;
+}
+
+b.higlight {
+  font-size: 1.7rem;
+  color: dodgerblue;
+}
+
+.ui.main.center.aligned.segment {
+  border: none;
+}
+
 .ui.menu {
   border-radius: 0;
   box-shadow: none;
