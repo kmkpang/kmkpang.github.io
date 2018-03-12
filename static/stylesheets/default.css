@@ -83,6 +83,11 @@ img {
 img.ui.image {
   display: block;
 }
+
+/* .thirteen.wide.column {
+  margin-left: -1rem;
+} */
+
 nav.ui.menu {
   border-radius: 0; }
   nav.ui.menu.ui.container > a.item:first-child {
