@@ -107,7 +107,25 @@ button:active,
 button:hover,
 a b.light-color:hover {
 	text-decoration: none;
-	color: #01b9ff;
+	color: #01dcff;
+}
+
+a.tel:hover,
+a.email:hover {
+	color: #fff;
+	-webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+	-webkit-mask-size: 200%;
+	animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+	from {
+		-webkit-mask-position: 150%;
+	}
+
+	to {
+		-webkit-mask-position: -50%;
+	}
 }
 
 b {
@@ -164,7 +182,7 @@ b.max-bold {
 	border-radius: 5px;
 	margin-bottom: 20px;
 	display: block;
-	background: #01b9ff;
+	background: #01dcff;
 }
 
 .margin-t-10 {
@@ -185,7 +203,7 @@ b.max-bold {
 }
 
 .font-yellow {
-	color: #01b9ff;
+	color: #01dcff;
 }
 
 .font-semi-white {
@@ -207,7 +225,7 @@ header {
 header .heading-wrapper {
 	border-radius: 5px;
 	padding: 30px 40px 20px;
-	background: #01b9ff;
+	background: #01dcff;
 	color: #fff;
 }
 
@@ -230,7 +248,7 @@ header .downlad-btn {
 	float: right;
 	margin-top: 30px;
 	box-shadow: inset 0 0px 4px rgba(0, 0, 0, .3);
-	background: #01b9ff;
+	background: #01dcff;
 	color: #fff;
 	-webkit-transition: all .2s ease;
 	transition: all .2s ease;
@@ -316,7 +334,7 @@ header .downlad-btn:hover {
 	top: 0;
 	z-index: -1;
 	border-radius: 20px;
-	background: #01b9ff;
+	background: #01dcff;
 	-webkit-transition: all .2s ease;
 	transition: all .2s ease;
 	-webkit-transform: scale(0);
@@ -357,8 +375,19 @@ header .downlad-btn:hover {
 	color: #777;
 }
 
+.about-me-section p,
+.education-section p,
+.experience-section p {
+	line-height: 40px;
+}
+
 .experience-section {
 	background: #1f72a2;
+	color: #fff;
+}
+
+.experience-section .font-lite-black,
+.experience-section .font-semi-white {
 	color: #fff;
 }
 
@@ -380,6 +409,10 @@ header .downlad-btn:hover {
 	display: block;
 	border-radius: 10px;
 	border: 2px solid #fff;
+}
+
+.education-section {
+	background: #f7fcff;
 }
 
 .education-wrapper {
@@ -416,7 +449,7 @@ header .downlad-btn:hover {
 
 .desc {
 	text-align: center;
-    line-height: 3;
+	line-height: 3;
 }
 
 .head {
@@ -426,11 +459,11 @@ header .downlad-btn:hover {
 }
 
 .pic-skill {
-    width: 3rem;
+	width: 3rem;
 }
 
 .social-icons {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 
@@ -442,6 +475,6 @@ header .downlad-btn:hover {
 .copyright {
 	text-align: center;
 	padding: 30px 0;
-	background: #01b9ff;
+	background: #01dcff;
 	color: #fff;
 }
