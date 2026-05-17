@@ -258,26 +258,28 @@ header .downlad-btn:hover {
 .about-me-section .row {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px 0;
+	gap: 15px 0;
 }
 
 /* Override bootstrap col-3 for skills to look better */
 .about-me-section .col-3 {
 	text-align: center;
 	transition: transform 0.2s;
-	padding: 15px;
+	padding: 10px 5px;
 	border-radius: 8px;
+	flex: 0 0 16.666667%;
+	max-width: 16.666667%;
 }
 
 .about-me-section .col-3:hover {
 	background: var(--bg-tertiary);
-	transform: translateY(-5px);
+	transform: translateY(-3px);
 }
 
 .pic-skill {
-	width: 48px;
-	height: 48px;
-	margin: 0 auto 10px;
+	width: 32px;
+	height: 32px;
+	margin: 0 auto 6px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -289,9 +291,12 @@ header .downlad-btn:hover {
 
 .desc {
 	font-family: var(--font-mono);
-	font-size: 0.85rem;
+	font-size: 0.75rem;
 	color: var(--text-primary);
 	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 /* Education Section */
@@ -374,6 +379,40 @@ header .downlad-btn:hover {
 	border: 1px solid var(--border-color);
 }
 
+.experience-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 20px 0 30px;
+}
+
+.experience-list li {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 12px;
+	color: var(--text-primary);
+	line-height: 1.7;
+}
+
+.experience-list li::before {
+	content: '▹';
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: var(--accent-color);
+	font-size: 1.4rem;
+	line-height: 1.2;
+}
+
+.experience-list li b {
+	color: var(--accent-color);
+	font-weight: 600;
+}
+
+.text-highlight {
+	color: var(--text-primary);
+	font-weight: 500;
+}
+
 /* Footer */
 footer {
 	background: var(--bg-primary);
@@ -390,28 +429,89 @@ footer .copyright {
 
 /* Print Styling */
 @media print {
-	.downlad-btn {
+	:root {
+		--bg-primary: #ffffff;
+		--bg-secondary: #f8f9fa;
+		--bg-tertiary: #f1f3f5;
+		--text-primary: #000000;
+		--text-secondary: #495057;
+		--accent-color: #0056b3;
+		--border-color: #dee2e6;
+	}
+
+	.downlad-btn, footer {
 		display: none !important;
 	}
 
 	body {
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
+		background-color: var(--bg-primary) !important;
+		font-size: 12px !important;
+		line-height: 1.5 !important;
 	}
 
 	header {
 		position: static;
-		padding: 10px 0;
+		padding: 0 !important;
+		margin-bottom: 15px !important;
 	}
 
 	.section {
-		padding: 40px 0;
-		page-break-inside: avoid;
+		padding: 15px 0 !important;
 	}
 
 	.experience,
 	.education,
 	.intro {
 		page-break-inside: avoid;
+	}
+
+	.margin-b-50 {
+		margin-bottom: 15px !important;
+	}
+
+	.margin-tb-30 {
+		margin-top: 10px !important;
+		margin-bottom: 10px !important;
+	}
+
+	.intro .profile-img {
+		width: 100px !important;
+		height: 100px !important;
+		margin-bottom: 10px !important;
+		box-shadow: none !important;
+	}
+
+	.about-me-section .col-3 {
+		flex: 0 0 12.5% !important;
+		max-width: 12.5% !important;
+		padding: 5px !important;
+	}
+
+	.pic-skill {
+		width: 24px !important;
+		height: 24px !important;
+		margin-bottom: 2px !important;
+	}
+
+	.desc {
+		font-size: 0.65rem !important;
+	}
+
+	h2 { font-size: 24px !important; margin-bottom: 5px !important; }
+	h3 { font-size: 18px !important; margin-bottom: 10px !important; }
+	h4 { font-size: 14px !important; margin-top: 10px !important; }
+	h5 { font-size: 12px !important; }
+	h6 { font-size: 10px !important; }
+	
+	.experience {
+		padding: 15px !important;
+		margin-bottom: 15px !important;
+		box-shadow: none !important;
+	}
+	
+	.experience-list li {
+		margin-bottom: 6px !important;
 	}
 }
